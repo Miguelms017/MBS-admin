@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="Header">
+        <h1>Welcome To the Appointment Administrator</h1>
+    </div>
+    <div id="lookup"></div>
+    <div id="body">
+        <div id="sidePanel">
+            <select name="Hairstylist" id="Hairstylist">
+                <option value="Any">Select Hairstylist</option>
+                <option value="Idania">Idania</option>
+                <option value="Yulia">Yulia -NAILS ONLY-</option>
+                <option value="Mercedes">Mercedes</option>
+            </select>
+            <input type="submit" id="submit">
+            <div id="ApptEdit">
+                <button id="Create">Create</button>
+                <button id="delete">delete</button>
+            </div>
+            <div id="newAppt">
+                <input type="text" name="Fname" id="Fname" placeholder="First Name*">
+                <input type="text" name="Lname" id="Lname" placeholder="Last Name">
+                <input type="text" name="Phone" id="Phone" placeholder="Phone*">
+                <input type="text" name="Email" id="Email" placeholder="Email">
+                <input type="datetime-local" name="Appt" id="Appt">
+                <select name="serviceType" id="serviceType" size="1">
+                    <option value="menHaircut">Men Haircut</option>
+                    <option value="womenHaircut">Women Haircut</option>
+                    <option value="color">Color</option>
+                    <option value="Highlights">Highlights</option>
+                    <option value="hairBrushing">Hair Brushing</option>
+                    <option value="waxing">Waxing</option>
+                    <option value="manicure">Manicure</option>
+                    <option value="pedicure">Pedicure</option>
+                </select>
+                <select name="Hairstylist" id="Hairstylist" size="1">
+                    <option>please choose an option</option>
+                    <option value="any">any</option>
+                    <option value="Idania">Idania</option>
+                    <option value="Yulia">Yulia -NAILS ONLY-</option>
+                    <option value="Mercedes">Mercedes</option>
+                </select>
+                <input type="text" name="Desc" id="Desc" placeholder="Description">
+                <input type="button" id="new" value="Submit">
+            </div>
+            <div id="timer">
+                <div id="timeleft">0:00</div>
+                <div id="timerButtons">
+                    <button id="timer10">10 minutes</button>
+                    <button id="timer20">20 minutes</button>
+                    <button id="timer30">30 minutes</button>
+                    <button id="timer40">40 minutes</button>
+                    <button id="add5">+5 minutes</button>
+                </div>
+            </div>
+        </div>
+        <script src="/script/main.js" type="module"></script>
+        <div id="table">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Hairstylist</th>
+                        <th>work</th>
+                        <th>Description</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

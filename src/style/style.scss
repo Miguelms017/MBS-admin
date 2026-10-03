@@ -1,0 +1,198 @@
+@use 'Assets/variables';
+@use 'Assets/typography';
+
+body{
+    margin: 0;
+    background-color: aquamarine;
+    font-family: var(--ff-content);
+}
+
+#Header{
+    font-family: var(--ff-title);
+    padding: 1.2em;
+    padding-bottom: 1.3em;
+    background-color: white;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    button{
+        margin-top: 0.5em;
+        font-size: 22pt;
+    }
+}
+
+#body{
+    display: flex;
+    flex-direction: row;
+    margin: 2em;
+    #sidePanel{
+        display: flex;
+        flex-direction: column;
+        padding-right: 1.2em;
+        width: 10%;
+        #Hairstylist{
+            margin-bottom: 0.5em;
+        }
+        #ApptEdit{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 1.2em;
+        }
+        #newAppt{
+            display: none;
+            input, select{
+                width: 100%;
+            }
+        }
+        #timer{
+            margin-top: 1.2em;
+            #timeleft{
+                background-color: black;
+                color: greenyellow;
+                padding: 12px;
+                margin-bottom: 0.5em;
+                font-size: 35pt;
+                font-family: var(--ff-clock);
+                text-align: right;
+            }
+            #timerButtons{
+                display: flex;
+                flex-direction: column;
+                button{
+                    margin-bottom: 5px;
+                }
+                #add5{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+#table{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        tbody{
+            background-color: rgba(255,255,255,0.5);
+            th{
+                background-color: darkgray;
+                padding: 0.75em;
+            }
+            td{
+                padding: 1.2em;
+                border-bottom: 1px solid black
+            }
+        }
+    }
+}
+
+#lookup{
+    margin: 1.5em 15em;
+    background-color: rgba(0,0,0,0.85);
+    color: rgb(186, 186, 186);
+    padding: 0.8em;
+    .warnHead{
+        border: red solid 0px;
+        border-bottom-width: 1px;
+        color: white;
+    }
+}
+
+.input{
+    width: 12ch;
+}
+
+.inputCal{
+    width: 6ch;
+}
+
+#pass, #pwds{
+  height: 100%;
+  margin: 0;
+}
+
+#pwds{
+  background-color: rgb(0,150,0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#login-container{
+  background-color: rgba(255,255,255,0.5);
+  padding: 6em;
+  border-radius: 25px;
+}
+.inputP{
+  margin: 0.25em;
+}
+#submit{
+  margin: 0.5em 0.25em;
+  height: 3em;
+  width: 15ch;
+}
+.text{
+  display: flex;
+}
+
+@media screen and (max-width: 1400px) {
+    #table{
+        font-size: 12px;
+    }
+    #sidePanel{
+        #Hairstylist{
+            font-size: 12px;
+        }
+        #submit{
+            font-size: 12px;
+            width: 13ch;
+        }
+        #ApptEdit{
+            button{
+                font-size: 12px;
+            }
+        }
+        #timer{
+            #timeleft{
+                font-size: 28px;
+            }
+            #timerButtons{
+                button{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #table{
+        font-size: 9px;
+    }
+    #sidePanel{
+        #Hairstylist{
+            font-size: 9px;
+        }
+        #submit{
+            font-size: 12px;
+            width: 12ch;
+        }
+        #ApptEdit{
+            font-size: 9px;
+        }
+        #timer{
+            #timeleft{
+                font-size: 20px;
+            }
+            #timerButtons{
+                button{
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+}
